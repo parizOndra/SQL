@@ -1,0 +1,15 @@
+SELECT
+	customer_id,
+	sum(amount)
+FROM payment
+WHERE
+GROUP BY customer_id
+HAVING count(payment_id) >= 40;
+
+SELECT
+	customer_id,
+	sum(amount)
+FROM payment
+WHERE staff_id = 2
+GROUP BY customer_id
+HAVING sum(amount) >= 100;

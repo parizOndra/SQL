@@ -1,0 +1,20 @@
+//Testing - challenge
+SELECT 
+	staff_id,
+	count (payment_id)
+FROM payment
+GROUP BY staff_id;
+
+SELECT 
+	rating,
+	ROUND(avg(replacement_cost),2)
+FROM film
+group by rating;
+
+SELECT
+	customer_id,
+	sum(amount)
+FROM payment
+group by customer_id
+order by sum(amount) DESC
+LIMIT 5;
